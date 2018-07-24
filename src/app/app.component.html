@@ -1,20 +1,56 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div>
+  <h1>FFBCV Angular prototype</h1>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<h2>Value Check</h2>
 
+<h3>Customer Needs</h3>
+<ul>
+  <li>To what extent is the customer and the customer's significant unmet need precisely understood and described?</li>
+  <li>To what extent is the understanding of the customer's significant need related to his/her future fitness?</li>
+  <li>To what extent are there systems, processes, feedback loops in place or planned which support understanding the evolution of customer's significant needs?</li>
+</ul>
+<textarea rows="5" cols="90"></textarea><br>
+<select id="valueq1">
+  <option value="150">Outstanding</option>
+  <option value="100">Strong</option>
+  <option value="50">Moderate</option>
+  <option value="0">Weak</option>
+  <option value="null" selected>Not Applicable</option>
+</select>
+
+
+<h3>Market Opportuntiy</h3>
+<ul>
+  <li>To what extent is the significant market opportunity precisely understood and described?</li>
+  <li>To what extent is the significant market opportunity (on which the solution builds on) intended to support the creation of a future fit market?</li>
+  <li>To what extent are there systems, processes, feedback loops in place or planned which support understanding the evolution of significant market opportunities?</li>
+</ul>
+<textarea rows="5" cols="90"></textarea><br>
+<select id="valueq2">
+  <option value="150">Outstanding</option>
+  <option value="100">Strong</option>
+  <option value="50">Moderate</option>
+  <option value="0">Weak</option>
+  <option value="null" selected>Not Applicable</option>
+</select>
+
+<h3>Solution</h3>
+<ul>
+  <li>To what extent does the solution fully meet the potential of the described customer and the significant customer's need?</li>
+  <li>To what extent does the solution fully meet the potential of the described market opportunity (incl. price)?</li>
+  <li>To what extent are there systems, processes, feedback loops in place or planned which support the development of the solution?</li>
+</ul>
+<textarea rows="5" cols="90"></textarea><br>
+<select id="valueq3">
+  <option value="150">Outstanding</option>
+  <option value="100">Strong</option>
+  <option value="50">Moderate</option>
+  <option value="0">Weak</option>
+  <option value="null" selected>Not Applicable</option>
+</select>
+
+
+
+<button id="validate" type="submit" (click)= "value()">Submit</button>
+
+<p>Average: {{score}}%</p>
