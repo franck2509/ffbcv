@@ -1,5 +1,5 @@
 <div>
-  <h1>FFBCV Angular prototype</h1>
+  <h1 i18n>FFBCV Angular prototype</h1>
 </div>
 <h2>Value Check</h2>
 
@@ -9,13 +9,9 @@
   <li>To what extent is the understanding of the customer's significant need related to his/her future fitness?</li>
   <li>To what extent are there systems, processes, feedback loops in place or planned which support understanding the evolution of customer's significant needs?</li>
 </ul>
-<textarea rows="5" cols="90"></textarea><br>
+<textarea id="textq1" rows="5" cols="90"></textarea><br>
 <select id="valueq1">
-  <option value="150">Outstanding</option>
-  <option value="100">Strong</option>
-  <option value="50">Moderate</option>
-  <option value="0">Weak</option>
-  <option value="null" selected>Not Applicable</option>
+  <option *ngFor="let selectScale of selectScales" [value]="selectScale.value">{{selectScale.display}}</option>
 </select>
 
 
@@ -25,13 +21,9 @@
   <li>To what extent is the significant market opportunity (on which the solution builds on) intended to support the creation of a future fit market?</li>
   <li>To what extent are there systems, processes, feedback loops in place or planned which support understanding the evolution of significant market opportunities?</li>
 </ul>
-<textarea rows="5" cols="90"></textarea><br>
+<textarea id="textq2" rows="5" cols="90"></textarea><br>
 <select id="valueq2">
-  <option value="150">Outstanding</option>
-  <option value="100">Strong</option>
-  <option value="50">Moderate</option>
-  <option value="0">Weak</option>
-  <option value="null" selected>Not Applicable</option>
+  <option *ngFor="let selectScale of selectScales" [value]="selectScale.value">{{selectScale.display}}</option>
 </select>
 
 <h3>Solution</h3>
@@ -40,17 +32,12 @@
   <li>To what extent does the solution fully meet the potential of the described market opportunity (incl. price)?</li>
   <li>To what extent are there systems, processes, feedback loops in place or planned which support the development of the solution?</li>
 </ul>
-<textarea rows="5" cols="90"></textarea><br>
+<textarea id="textq3" rows="5" cols="90"></textarea><br>
 <select id="valueq3">
-  <option value="150">Outstanding</option>
-  <option value="100">Strong</option>
-  <option value="50">Moderate</option>
-  <option value="0">Weak</option>
-  <option value="null" selected>Not Applicable</option>
+  <option *ngFor="let selectScale of selectScales" [value]="selectScale.value">{{selectScale.display}}</option>
 </select>
 
-
-
 <button id="validate" type="submit" (click)= "value()">Submit</button>
+<button type="submit" (click)="savePDF()">Download PDF</button>
 
 <p>Average: {{score}}%</p>
